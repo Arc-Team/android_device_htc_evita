@@ -82,6 +82,7 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
+    HTCDoze \
     make_ext4fs \
     com.android.future.usb.accessory
 
