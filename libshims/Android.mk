@@ -16,9 +16,9 @@ LOCAL_PATH := $(call my-dir)
 
 # liblog.so
 include $(CLEAR_VARS)
-LOCAL_SRC_FILES    := htc_log.c
-LOCAL_MODULE       := libshim_log
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_SRC_FILES   := htc_log.c
+LOCAL_MODULE      := libshim_log
+LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
 
 
@@ -27,7 +27,7 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES        := icu53.c
 LOCAL_SHARED_LIBRARIES := libicuuc libicui18n
 LOCAL_MODULE           := libshim_qcopt
-LOCAL_MODULE_CLASS     := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS      := optional
 include $(BUILD_SHARED_LIBRARY)
 
 
@@ -39,12 +39,22 @@ LOCAL_SRC_FILES := \
     ui/GraphicBufferAllocator.cpp \
     ui/GraphicBufferMapper.cpp \
     MemoryHeapPmem.cpp \
-    MemoryBase.c \
-    VectorImpl.c
+    MemoryBase.c
 
-LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware libui libgui libbinder libutils libsync
+LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware libui libgui libbinder libutils libsync libshim_sensors
 LOCAL_MODULE           := libshim_camera
 LOCAL_C_INCLUDES       += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
-LOCAL_MODULE_CLASS     := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS      := optional
+include $(BUILD_SHARED_LIBRARY)
+
+
+# sensors.default.so
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := \
+    sensors.c \
+    VectorImpl.c
+
+LOCAL_MODULE      := libshim_sensors
+LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
