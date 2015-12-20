@@ -261,6 +261,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/init.d/81clean:/system/etc/init.d/81clean
 
+# Dalvik-Hack
+PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/etc/init.d/01dalvik:/system/etc/init.d/01dalvik
+
 # NFC
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/nfcee_access.xml:/system/etc/nfcee_access.xml \
