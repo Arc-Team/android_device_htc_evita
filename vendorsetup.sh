@@ -1,1 +1,2 @@
 add_lunch_combo cm_evita-userdebug
+add_lunch_combo pac_evita-userdebug
