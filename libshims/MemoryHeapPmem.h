@@ -22,6 +22,7 @@
 
 #include <binder/MemoryHeapBase.h>
 #include <binder/IMemory.h>
+
 #include <utils/SortedVector.h>
 #include <utils/threads.h>
 
@@ -45,7 +46,7 @@ public:
         virtual void revoke() = 0;
         sp<MemoryHeapPmem>  mClientHeap;
     };
-    
+
     MemoryHeapPmem(const sp<MemoryHeapBase>& pmemHeap, uint32_t flags = 0);
     ~MemoryHeapPmem();
 
@@ -54,10 +55,10 @@ public:
 
     /* make the whole heap visible (you know who you are) */
     virtual status_t slap();
-    
+
     /* hide (revoke) the whole heap (the client will see the garbage page) */
     virtual status_t unslap();
-    
+
     /* revoke all allocations made by this heap */
     virtual void revoke();
 

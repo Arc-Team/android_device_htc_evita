@@ -29,7 +29,6 @@
 
 #include <hardware/gralloc.h>
 
-
 namespace android {
 // ---------------------------------------------------------------------------
 
@@ -70,7 +69,7 @@ status_t GraphicBufferMapper::unregisterBuffer(buffer_handle_t handle)
     return err;
 }
 
-status_t GraphicBufferMapper::lock(buffer_handle_t handle, 
+status_t GraphicBufferMapper::lock(buffer_handle_t handle,
         int usage, const Rect& bounds, void** vaddr)
 {
     ATRACE_CALL();

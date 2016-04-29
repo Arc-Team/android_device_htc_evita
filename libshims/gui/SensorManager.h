@@ -19,7 +19,6 @@
 
 #include <stdint.h>
 #include <sys/types.h>
-
 #include <binder/IBinder.h>
 
 #include <utils/Errors.h>

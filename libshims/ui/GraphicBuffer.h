@@ -23,9 +23,9 @@
 #include <ui/ANativeObjectBase.h>
 #include <ui/PixelFormat.h>
 #include <ui/Rect.h>
+
 #include <utils/Flattenable.h>
 #include <utils/RefBase.h>
-
 
 struct ANativeWindowBuffer;
 

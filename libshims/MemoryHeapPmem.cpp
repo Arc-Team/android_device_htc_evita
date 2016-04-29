@@ -21,13 +21,14 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>
+
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/ioctl.h>
 
 #include <cutils/log.h>
-
 #include "MemoryHeapPmem.h"
+
 #include <binder/MemoryHeapBase.h>
 
 #ifdef HAVE_ANDROID_OS
@@ -106,9 +107,9 @@ void SubRegionMemory::revoke()
     // NOTE: revoke() doesn't need to be protected by a lock because it
     // can only be called from MemoryHeapPmem::revoke(), which means
     // that we can't be in ~SubRegionMemory(), or in ~SubRegionMemory(),
-    // which means MemoryHeapPmem::revoke() wouldn't have been able to 
+    // which means MemoryHeapPmem::revoke() wouldn't have been able to
     // promote() it.
-    
+
 #ifdef HAVE_ANDROID_OS
     if (mSize != 0) {
         const sp<MemoryHeapPmem>& heap(getHeap());
@@ -145,7 +146,7 @@ MemoryHeapPmem::MemoryHeapPmem(const sp<MemoryHeapBase>& pmemHeap,
             } else {
                 // everything went well...
                 mParentHeap = pmemHeap;
-                MemoryHeapBase::init(fd, 
+                MemoryHeapBase::init(fd,
                         pmemHeap->getBase(),
                         pmemHeap->getSize(),
                         pmemHeap->getFlags() | flags,
@@ -155,7 +156,7 @@ MemoryHeapPmem::MemoryHeapPmem(const sp<MemoryHeapBase>& pmemHeap,
     }
 #else
     mParentHeap = pmemHeap;
-    MemoryHeapBase::init( 
+    MemoryHeapBase::init(
             dup(pmemHeap->heapID()),
             pmemHeap->getBase(),
             pmemHeap->getSize(),
@@ -182,7 +183,7 @@ sp<MemoryHeapPmem::MemoryPmem> MemoryHeapPmem::createMemory(
         size_t offset, size_t size)
 {
     sp<SubRegionMemory> memory;
-    if (heapID() > 0) 
+    if (heapID() > 0)
         memory = new SubRegionMemory(this, offset, size);
     return memory;
 }
@@ -231,7 +232,7 @@ void MemoryHeapPmem::revoke()
         Mutex::Autolock _l(mLock);
         allocations = mAllocations;
     }
-    
+
     ssize_t count = allocations.size();
     for (ssize_t i=0 ; i<count ; i++) {
         sp<MemoryPmem> memory(allocations[i].promote());
