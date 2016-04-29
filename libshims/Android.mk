@@ -48,16 +48,3 @@ LOCAL_C_INCLUDES       += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 LOCAL_MODULE_CLASS     := SHARED_LIBRARIES
 include $(BUILD_SHARED_LIBRARY)
-
-
-# sensors.default.so
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := \
-    gui/SensorManager.cpp \
-    MemoryBase.c \
-    VectorImpl.c
-
-LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware libgui libbinder libutils
-LOCAL_MODULE           := libshim_sensors
-LOCAL_MODULE_CLASS     := SHARED_LIBRARIES
-include $(BUILD_SHARED_LIBRARY)
