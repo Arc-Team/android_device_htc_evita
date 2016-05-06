@@ -240,13 +240,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/audio_policy.conf:/system/etc/audio_policy.conf \
     device/htc/evita/prebuilt/etc/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x \
-    device/htc/evita/prebuilt/etc/soundimage/srs_bypass.cfg:/system/etc/soundimage/srs_bypass.cfg \
-    device/htc/evita/prebuilt/etc/soundimage/srs_geq10.cfg:/system/etc/soundimage/srs_geq10.cfg \
-    device/htc/evita/prebuilt/etc/soundimage/srs_global.cfg:/system/etc/soundimage/srs_global.cfg \
-    device/htc/evita/prebuilt/etc/soundimage/srsfx_trumedia_51.cfg:/system/etc/soundimage/srsfx_trumedia_51.cfg \
-    device/htc/evita/prebuilt/etc/soundimage/srsfx_trumedia_movie.cfg:/system/etc/soundimage/srsfx_trumedia_movie.cfg \
-    device/htc/evita/prebuilt/etc/soundimage/srsfx_trumedia_music.cfg:/system/etc/soundimage/srsfx_trumedia_music.cfg \
-    device/htc/evita/prebuilt/etc/soundimage/srsfx_trumedia_voice.cfg:/system/etc/soundimage/srsfx_trumedia_voice.cfg \
     device/htc/evita/prebuilt/lib/libacdbloader.so:/system/lib/libacdbloader.so \
     device/htc/evita/prebuilt/lib/libaudcal.so:/system/lib/libaudcal.so
 
