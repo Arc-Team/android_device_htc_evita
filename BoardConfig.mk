@@ -117,9 +117,6 @@ BOARD_VENDOR := htc
 # Libril
 BOARD_PROVIDES_LIBRIL := true
 
-# Vold
-BOARD_VOLD_MAX_PARTITIONS := 37
-
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
@@ -153,6 +150,3 @@ TARGET_SPECIFIC_HEADER_PATH := device/htc/evita/include
 
 # Charger
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
-
-# USB
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
