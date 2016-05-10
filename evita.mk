@@ -251,9 +251,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 PRODUCT_COPY_FILES += \
-    device/htc/evita/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
-    device/htc/evita/prebuilt/lib/hw/nfc.default.so:system/lib/hw/nfc.default.so \
-    device/htc/evita/prebuilt/vendor/firmware/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so
+    device/htc/evita/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml
 
 # Camera
 PRODUCT_COPY_FILES += \
