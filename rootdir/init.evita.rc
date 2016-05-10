@@ -11,7 +11,6 @@ on init
 on fs
     # For NFC
     symlink /system/vendor/pittpatt /vendor/pittpatt
-    symlink /system/vendor/firmware/libpn544_fw.so /vendor/firmware/libpn544_fw.so
 
     # Create firmware mount points
     mkdir /firmware_radio 0771 system system

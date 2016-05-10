@@ -59,6 +59,7 @@ PRODUCT_PACKAGES += \
     libnfc \
     libnfc_jni \
     Nfc \
+    nfc.msm8960 \
     Tag \
     com.android.nfc_extras
 
@@ -109,13 +110,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.force_highendgfx=true \
     ro.opengles.version=131072 \
     ro.sf.lcd_density=320
-
-# NFC
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.nfc.fw_download=true \
-    debug.nfc.fw_boot_download=false \
-    debug.nfc.se=true \
-    ro.nfc.port=I2C
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
