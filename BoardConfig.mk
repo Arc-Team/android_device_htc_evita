@@ -114,9 +114,6 @@ BOARD_SEPOLICY_DIRS += device/htc/evita/sepolicy
 # Vendor
 BOARD_VENDOR := htc
 
-# PAC optimizations
-PAC_LOW_RAM_DEVICE := true
-
 # Libril
 BOARD_PROVIDES_LIBRIL := true
 
@@ -131,9 +128,6 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
-
-# WebView version
-PREBUILT_WEBVIEW_VERSION := beta
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
