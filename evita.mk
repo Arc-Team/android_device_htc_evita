@@ -211,6 +211,8 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/etc/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    device/htc/evita/prebuilt/etc/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny \
     device/htc/evita/prebuilt/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
     device/htc/evita/prebuilt/etc/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/htc/evita/prebuilt/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
